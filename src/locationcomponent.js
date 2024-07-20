@@ -17,6 +17,7 @@ const Title = styled.h2`
 `;
 
 const Adress = styled.p`
+  
   color: #818181;
   font-weight: 500;
   margin: 0;

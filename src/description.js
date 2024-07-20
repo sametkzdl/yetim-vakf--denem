@@ -39,19 +39,19 @@ const LocationSource = [
 Muhiddin Sok. No:11 34091 
 Fatih/İstanbul
 `,
-    ImgSource: "email.png",
+    ImgSource: "email.svg",
   },
   {
     id: 2,
     title: "Bize e-posta gönderin?",
-    text: `info @yetimvakfi .org.tr`,
-    ImgSource: "gps.png",
+    text: `info@yetimvakfi.org.tr`,
+    ImgSource: "arrow-gps.svg",
   },
   {
     id: 1,
     title: "İletişim Merkezimize Ulaş",
     text: `0212 970 60 60`,
-    ImgSource: "telephone.png",
+    ImgSource: "phone(2).svg",
   },
 ];
 

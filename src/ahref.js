@@ -18,18 +18,11 @@ const Link = styled.div`
   }
 `;
 
-const Arrowİmg = styled.img`
-  width: 10px;
-  height: 6px;
-`;
-
-const SourceImg = ["./photo/arrow1.png"];
-
-export default function Ahref({ ad }) {
+export default function Ahref({ children, ...rest }) {
   return (
-    <Link>
-      {ad}
-      <Arrowİmg src={SourceImg[0]}></Arrowİmg>
+    <Link {...rest}>
+      {children}
+      <img width={24} height={24} alt="" src="./photo/create-down.svg"></img>
     </Link>
   );
 }

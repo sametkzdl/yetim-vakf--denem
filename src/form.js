@@ -78,7 +78,7 @@ export default function FormLogin() {
       ))}
       <HeadTitle>Mesajınız</HeadTitle>
       <TextArea rows={5}></TextArea>
-      <StyledButton bgTheme="secondary">Gönder</StyledButton>
+      <StyledButton themeColor="secondary">Gönder</StyledButton>
     </Form>
   );
 }

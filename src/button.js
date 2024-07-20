@@ -1,20 +1,41 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const StyledButton = styled.button`
-  padding-inline: 15px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
   height: 50px;
   border-radius: 5px;
-  background-color: ${({ theme, bgTheme }) => theme[bgTheme || "primary"]};
-  border: none;
-  color: #fff;
   font-weight: 700;
-  font-size: 16px;
   white-space: nowrap;
   cursor: pointer;
   &:focus {
-    box-shadow: ${({ theme, bgTheme }) => theme[bgTheme || "primary"] + "80"}
+    box-shadow: ${({ theme, themeColor }) =>
+        theme[themeColor || "primary"] + "60"}
       0px 0px 0px 0.2rem;
   }
+  ${({ theme, buttonType = "default", themeColor }) =>
+    ({
+      default: css`
+        padding-inline: 15px;
+        color: #fff;
+        background-color: ${theme[themeColor || "primary"]};
+      `,
+      soft: css`
+        color: ${theme[themeColor || "primary"]};
+        background-color: ${theme.background};
+      `,
+      link: css`
+        color: ${theme.text};
+        font-weight: 500;
+        &&:hover {
+          color: ${({ theme, themeColor }) => theme[themeColor || "primary"]};
+        }
+      `,
+    }[buttonType])}
 `;
 
 export default function Button({ children, ...rest }) {

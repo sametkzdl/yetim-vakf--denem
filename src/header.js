@@ -80,7 +80,7 @@ const SourceImg = [
   "./photo/shopping-basket.png",
   "./photo/more.png",
   "./photo/logo.png",
-  "./photo/right-arrow.png",
+  "./photo/right-arrow.svg",
 ];
 
 export default function Header() {
@@ -96,7 +96,7 @@ export default function Header() {
           <HeaderPagination>
             <HeaderPaginationTitle>Ana Sayfa</HeaderPaginationTitle>
             <ArrowImg>
-              <img src={SourceImg[3]} alt="" width={10} height={10}></img>
+              <img src={SourceImg[3]} alt="" width={24} height={24}></img>
             </ArrowImg>
             <HeaderPaginationTitle2>İletişim</HeaderPaginationTitle2>
           </HeaderPagination>
